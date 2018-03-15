@@ -140,3 +140,75 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 70ms (Views: 11.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-15 19:20:44 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/railties-5.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/railties-5.0.6/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 65ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2346594783171132165);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (69.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSubmissions (20180315222844)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (228.7ms)[0m  [1m[35mCREATE TABLE "submissions" ("id" serial primary key, "title" character varying, "lead" character varying, "body" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180315222844"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (16.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2346594783171132165)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2018-03-15 19:30:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/railties-5.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/railties-5.0.6/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 25ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/submissions" for 127.0.0.1 at 2018-03-15 19:30:27 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.9ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 2540ms (Views: 2527.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/submissions/new" for 127.0.0.1 at 2018-03-15 19:30:43 -0300
+Processing by SubmissionsController#new as HTML
+  Rendering submissions/new.html.erb within layouts/application
+  Rendered submissions/_form.html.erb (116.6ms)
+  Rendered submissions/new.html.erb within layouts/application (121.0ms)
+Completed 200 OK in 189ms (Views: 167.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/submissions" for 127.0.0.1 at 2018-03-15 19:30:54 -0300
+Processing by SubmissionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bt3A6e0vxYVgEKFWTWg0kFD/eSOC2XIqG7oITELYMDgxCFghTIGC3DnU+TPHMBEHvAx3xIYS2pa8mK7mI5L12g==", "submission"=>{"title"=>"titulox", "lead"=>"bajadax", "body"=>"cuerpox"}, "commit"=>"Create Submission"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "submissions" ("title", "lead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "titulox"], ["lead", "bajadax"], ["body", "cuerpox"], ["created_at", "2018-03-15 22:30:54.058373"], ["updated_at", "2018-03-15 22:30:54.058373"]]
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/submissions/1
+Completed 302 Found in 47ms (ActiveRecord: 41.7ms)
+
+
+Started GET "/submissions/1" for 127.0.0.1 at 2018-03-15 19:30:54 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  Rendered submissions/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 76ms (Views: 36.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/submissions" for 127.0.0.1 at 2018-03-15 19:30:57 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.6ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 38.9ms | ActiveRecord: 0.6ms)
+
+
