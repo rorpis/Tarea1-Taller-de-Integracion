@@ -30,12 +30,16 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @submission, notice: 'Comment was successfully created.' }
-        #format.json { render :show, status: :created, location: @comment }
+      if comment_params[:title].present? && comment_params[:body].present?
+        if @comment.save
+          format.html { redirect_to @submission, notice: 'Comment was successfully created.' }
+          #format.json { render :show, status: :created, location: @comment }
+        else
+          format.html { render :new }
+          #format.json { render json: @comment.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render :new }
-        #format.json { render json: @comment.errors, status: :unprocessable_entity }
+        format.html { redirect_to @submission, notice: 'Debe llenar los campos.' }
       end
     end
   end

@@ -3,7 +3,9 @@
     <%= link_to like_submission_path(@submission), method: :put do %>
       <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
     <% end %>
-    <%= @submission.title %>
+    <h3>
+      <%= @submission.title %>
+    </h3>
     <br>
     <%= @submission.lead %>
     <br>
@@ -17,9 +19,9 @@
     <%= simple_form_for [@submission, Comment.new] do |f| %>
       <div class="field">
         <%= f.label "Nombre: " %>
-        <%= f.text_field :title %>
+        <%= f.text_field :title, required:true %>
       </div>
-      <%= f.text_area :body, class: "form-control" %>
+      <%= f.text_area :body, class: "form-control", required:true %>
       <br>
       <%= f.submit "Agregar comentario" %>
     <% end %>

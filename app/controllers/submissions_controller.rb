@@ -32,12 +32,16 @@ class SubmissionsController < ApplicationController
     @submission = current_user.submissions.build(submission_params)
 
     respond_to do |format|
-      if @submission.save
-        format.html { redirect_to @submission, notice: 'Submission was successfully created.' }
-        format.json { render :show, status: :created, location: @submission }
+      if submission_params[:title].present? && submission_params[:body].present? && submission_params[:lead].present?
+        if @submission.save
+          format.html { redirect_to @submission, notice: 'Submission was successfully created.' }
+          format.json { render :show, status: :created, location: @submission }
+        else
+          format.html { render :new }
+          format.json { render json: @submission.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render :new }
-        format.json { render json: @submission.errors, status: :unprocessable_entity }
+        format.html { redirect_to new_submission_path, notice: 'Debe llenar todos los campos para publicar una noticia.' }
       end
     end
   end
