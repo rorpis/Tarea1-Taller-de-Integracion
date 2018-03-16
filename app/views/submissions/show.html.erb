@@ -10,7 +10,7 @@
     <br>
     <%= @submission.body %>
   </h4>
-  <p><%= @submission.get_upvotes.size %> likes, by <%= @submission.user.email %> <%= time_ago_in_words(@submission.created_at) %> ago | <%= link_to "#{@submission.comments.count} comments", @submission %> </p>
+  <p><%= @submission.get_upvotes.size %> likes, by <%= @submission.user.email %> | publicado el: <%= @submission.created_at.strftime("%d-%m-%y %H:%M") %> | <%= link_to "#{@submission.comments.count} comments", @submission %> </p>
   <br>
 
   <% if user_signed_in? %>

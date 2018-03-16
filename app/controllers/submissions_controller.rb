@@ -2,6 +2,10 @@ class SubmissionsController < ApplicationController
   before_action :set_submission, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index, :show]
 
+  def list
+    @submissions = Submission.order(created_at: :desc)
+  end
+
   # GET /submissions
   # GET /submissions.json
   def index

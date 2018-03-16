@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get '/submissions/list', to: 'submissions#list'
+  resources :submissions
   resources :comments
   devise_for :users
   resources :submissions do

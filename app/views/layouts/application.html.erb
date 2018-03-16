@@ -22,7 +22,7 @@
                 <li><%= link_to "Publicar", new_submission_path %></li>
                 <li><%= link_to "Cuenta", edit_user_registration_path %></li>
                 <% if current_user.admin? %>
-                  <li><%= link_to "Sitio Administracion", root_path %></li>
+                  <li><%= link_to "Sitio Administracion", submissions_list_path %></li>
                 <% end %>
               </ul>
               <ul class="nav navbar-nav navbar-right">
