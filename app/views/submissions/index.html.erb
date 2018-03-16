@@ -7,9 +7,9 @@
             <i class="fa fa-caret-up fa-lg " aria-hidden="true"></i>
           <% end %>
 
-          <%= link_to submission.title, submission.url, class: "title" %>
-          <%= link_to submission.lead, "(#{submission.lead})", target: "_blank" %>
-          <%= link_to submission.body, "(#{submission.body})", target: "_blank" %>
+          <%= link_to submission.title, submission, class: "title" %>
+          <%= submission.lead %>
+          <%= submission.body %>
         </td>
         <tr class="post">
           <td> <p><%= submission.get_upvotes.size %> points by <%= submission.user.email %> <%= time_ago_in_words(submission.created_at) %> ago | <%= link_to "#{submission.comments.count} comments", submission %> </p></td>
