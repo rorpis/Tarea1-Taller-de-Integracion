@@ -15,9 +15,13 @@
 
   <% if user_signed_in? %>
     <%= simple_form_for [@submission, Comment.new] do |f| %>
+      <div class="field">
+        <%= f.label "Nombre: " %>
+        <%= f.text_field :title %>
+      </div>
       <%= f.text_area :body, class: "form-control" %>
       <br>
-      <%= f.submit "agregar comentario" %>
+      <%= f.submit "Agregar comentario" %>
     <% end %>
   <% else %>
     <h6>

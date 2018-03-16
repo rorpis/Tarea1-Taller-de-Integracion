@@ -1,7 +1,7 @@
 <%= form_for(comment) do |f| %>
   <% if comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+      <h2><%= pluralize(comment.errors.count, "error") %> el comentario no pudo ser publicado:</h2>
 
       <ul>
       <% comment.errors.full_messages.each do |message| %>
@@ -14,6 +14,11 @@
   <div class="field">
     <%= f.label :submission_id %>
     <%= f.number_field :submission_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label "nombre" %>
+    <%= f.text_field :title %>
   </div>
 
   <div class="field">
