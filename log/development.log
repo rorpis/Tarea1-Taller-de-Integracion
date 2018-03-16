@@ -3943,3 +3943,899 @@ Processing by SubmissionsController#index as HTML
 Completed 200 OK in 1983ms (Views: 1972.5ms | ActiveRecord: 5.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:24:01 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (25.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 92.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:24:02 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.6ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (26.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 94.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:24:50 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (24.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 110.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/submissions/5" for 127.0.0.1 at 2018-03-15 23:24:54 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (4.5ms)
+  Rendered submissions/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 98ms (Views: 87.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:25:08 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (35.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 104.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/submissions/2" for 127.0.0.1 at 2018-03-15 23:25:12 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered collection of comments/_comment.html.erb [1 times] (5.1ms)
+  Rendered submissions/show.html.erb within layouts/application (17.6ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <%= div_for(comment) do %>
+    2:   <div class="comments-wrapper clearfix">
+    3:     <div class="null-left">
+    4:       <p><small> <%= comment.user.email %> <strong><%= time_ago_in_words(comment.created_at) %></strong> ago </small></p>
+    5:       <p class="lead"><%= comment.body %></p>
+    6:     </div>
+    7:   </div>
+  
+app/views/comments/_comment.html.erb:4:in `block in _app_views_comments__comment_html_erb___3115569048305350326_70290889791300'
+app/views/comments/_comment.html.erb:1:in `_app_views_comments__comment_html_erb___3115569048305350326_70290889791300'
+app/views/submissions/show.html.erb:23:in `_app_views_submissions_show_html_erb__2871481755924505878_70290890772340'
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (93.2ms)
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:25:15 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (1.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (30.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 100.3ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/submissions/2" for 127.0.0.1 at 2018-03-15 23:25:18 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered collection of comments/_comment.html.erb [1 times] (4.9ms)
+  Rendered submissions/show.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <%= div_for(comment) do %>
+    2:   <div class="comments-wrapper clearfix">
+    3:     <div class="null-left">
+    4:       <p><small> <%= comment.user.email %> <strong><%= time_ago_in_words(comment.created_at) %></strong> ago </small></p>
+    5:       <p class="lead"><%= comment.body %></p>
+    6:     </div>
+    7:   </div>
+  
+app/views/comments/_comment.html.erb:4:in `block in _app_views_comments__comment_html_erb___3115569048305350326_70290892330960'
+app/views/comments/_comment.html.erb:1:in `_app_views_comments__comment_html_erb___3115569048305350326_70290892330960'
+app/views/submissions/show.html.erb:23:in `_app_views_submissions_show_html_erb__2871481755924505878_70290892792860'
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.2ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.5ms)
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:25:21 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (1.2ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (29.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 103.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2018-03-15 23:25:23 -0300
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 107ms (Views: 105.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-15 23:25:33 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"93nlxvt7I+lnKSb1pPUbkMNTHG0SZbqiNUlp0EaMgdbJxsOE2isksiNtcDHYSA4noQfZE2DyMQl7Si9cimlOeA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:25:33 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 103ms (Views: 95.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:25:35 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 113ms (Views: 103.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/submissions/5" for 127.0.0.1 at 2018-03-15 23:25:36 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubmission Load (0.6ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (3.0ms)
+  Rendered submissions/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 114ms (Views: 102.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/submissions/5/comments" for 127.0.0.1 at 2018-03-15 23:25:39 -0300
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Rg7R1BwYmjQ0/6besjOixz/HZbjieCvLIajwVmOiZDcP+qlM+VOJw+/ZhjsbIZjJF/iKdJ3TplTWzcASRAlBw==", "comment"=>{"body"=>"comasd"}, "commit"=>"add comment", "submission_id"=>"5"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "comments" ("submission_id", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["submission_id", 5], ["body", "comasd"], ["created_at", "2018-03-16 02:25:39.938478"], ["updated_at", "2018-03-16 02:25:39.938478"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/submissions/5
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/submissions/5" for 127.0.0.1 at 2018-03-15 23:25:39 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [2 times] (9.3ms)
+  Rendered submissions/show.html.erb within layouts/application (25.0ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <%= div_for(comment) do %>
+    2:   <div class="comments-wrapper clearfix">
+    3:     <div class="null-left">
+    4:       <p><small> <%= comment.user.email %> <strong><%= time_ago_in_words(comment.created_at) %></strong> ago </small></p>
+    5:       <p class="lead"><%= comment.body %></p>
+    6:     </div>
+    7:   </div>
+  
+app/views/comments/_comment.html.erb:4:in `block in _app_views_comments__comment_html_erb___3115569048305350326_70290899066800'
+app/views/comments/_comment.html.erb:1:in `_app_views_comments__comment_html_erb___3115569048305350326_70290899066800'
+app/views/submissions/show.html.erb:23:in `_app_views_submissions_show_html_erb__2871481755924505878_70290902435740'
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.4ms)
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:30:48 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 114ms (Views: 105.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/submissions/5" for 127.0.0.1 at 2018-03-15 23:30:53 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubmission Load (3.2ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [2 times] (8.1ms)
+  Rendered submissions/show.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <%= div_for(comment) do %>
+    2:   <div class="comments-wrapper clearfix">
+    3:     <div class="null-left">
+    4:       <p><small> <%= comment.user.email %> <strong><%= time_ago_in_words(comment.created_at) %></strong> ago </small></p>
+    5:       <p class="lead"><%= comment.body %></p>
+    6:     </div>
+    7:   </div>
+  
+app/views/comments/_comment.html.erb:4:in `block in _app_views_comments__comment_html_erb___3115569048305350326_70290903747540'
+app/views/comments/_comment.html.erb:1:in `_app_views_comments__comment_html_erb___3115569048305350326_70290903747540'
+app/views/submissions/show.html.erb:23:in `_app_views_submissions_show_html_erb__2871481755924505878_70290901599580'
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.6ms)
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:30:58 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 118ms (Views: 107.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:31:04 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (2.9ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.4ms)
+  Rendered submissions/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 105ms (Views: 94.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:31:08 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (4.5ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.7ms)
+  Rendered submissions/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 108ms (Views: 94.6ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:32:28 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.5ms)
+  Rendered submissions/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 113ms (Views: 104.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:34:24 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 112ms (Views: 100.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/submissions/5" for 127.0.0.1 at 2018-03-15 23:34:26 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubmission Load (2.8ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [2 times] (7.6ms)
+  Rendered submissions/show.html.erb within layouts/application (19.8ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <%= div_for(comment) do %>
+    2:   <div class="comments-wrapper clearfix">
+    3:     <div class="null-left">
+    4:       <p><small> <%= comment.user.email %> <strong><%= time_ago_in_words(comment.created_at) %></strong> ago </small></p>
+    5:       <p class="lead"><%= comment.body %></p>
+    6:     </div>
+    7:   </div>
+  
+app/views/comments/_comment.html.erb:4:in `block in _app_views_comments__comment_html_erb___3115569048305350326_70290881566000'
+app/views/comments/_comment.html.erb:1:in `_app_views_comments__comment_html_erb___3115569048305350326_70290881566000'
+app/views/submissions/show.html.erb:25:in `_app_views_submissions_show_html_erb__2871481755924505878_70290870659780'
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.2ms)
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:34:29 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 109ms (Views: 100.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:34:30 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.8ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.6ms)
+  Rendered submissions/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 115ms (Views: 104.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:35:56 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.3ms)
+  Rendered submissions/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 95ms (Views: 89.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:35:58 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.1ms)
+  Rendered submissions/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 97ms (Views: 89.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:36:00 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.7ms)
+  Rendered submissions/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 89ms (Views: 83.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:36:08 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.7ms)
+  Rendered submissions/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 103ms (Views: 96.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:37:42 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  Rendered submissions/show.html.erb within layouts/application (26.3ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/Rorpis/Documents/UC/Taller de Integración/T1 - Taller de Integración/app/views/submissions/show.html.erb:23: syntax error, unexpected '<'
+eeze;@output_buffer.append=( <b>"Debes estar logeado para po
+                              ^
+/Users/Rorpis/Documents/UC/Taller de Integración/T1 - Taller de Integración/app/views/submissions/show.html.erb:28: unknown regexp options - dv
+/Users/Rorpis/Documents/UC/Taller de Integración/T1 - Taller de Integración/app/views/submissions/show.html.erb:28: unmatched close parenthesis: /b> );@output_buffer.safe_append='
+'.freeze;   end 
+@output_buffer.safe_append='
+  <div id="comments">
+    '.freeze;@output_buffer.append=( render :partial => @submission.comments );@output_buffer.safe_append='
+  </i
+/Users/Rorpis/Documents/UC/Taller de Integración/T1 - Taller de Integración/app/views/submissions/show.html.erb:29: syntax error, unexpected '<'
+</div>
+ ^
+/Users/Rorpis/Documents/UC/Taller de Integración/T1 - Taller de Integración/app/views/submissions/show.html.erb:29: unterminated regexp meets end of file):
+  
+app/views/submissions/show.html.erb:23: syntax error, unexpected '<'
+app/views/submissions/show.html.erb:28: unknown regexp options - dv
+app/views/submissions/show.html.erb:28: unmatched close parenthesis: /b> );@output_buffer.safe_append='
+app/views/submissions/show.html.erb:29: syntax error, unexpected '<'
+app/views/submissions/show.html.erb:29: unterminated regexp meets end of file
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.1ms)
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:39:12 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.1ms)
+  Rendered submissions/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 89ms (Views: 82.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:39:32 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (3.0ms)
+  Rendered submissions/show.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 106ms (Views: 98.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:39:38 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.2ms)
+  Rendered submissions/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 90ms (Views: 83.8ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/submissions/4/like" for 127.0.0.1 at 2018-03-15 23:40:31 -0300
+Processing by SubmissionsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"U4xNEVBPBbSUC2C8um466KUzEqwE8OFGipOLZkkD+00/mKtZEdZK46BoBJkm8NuvJSABfXKoKKhIiqqawSoJVA==", "id"=>"4"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-15 23:40:31 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:40:34 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 107ms (Views: 95.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:45:43 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 114ms (Views: 103.7ms | ActiveRecord: 4.7ms)
+
+
+Started PUT "/submissions/5/like" for 127.0.0.1 at 2018-03-15 23:45:45 -0300
+Processing by SubmissionsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"IV3yVRN/cRHBPLx4mIF9b4GG84dYagEyYXI4usgNRJBNSRQdUuY+RvVf2F0EH5woAZXgVi4yyNyjaxlGQCS2iQ==", "id"=>"5"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-15 23:45:45 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 96ms (Views: 94.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:45:47 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 110ms (Views: 97.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:45:55 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.7ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (3.4ms)
+  Rendered submissions/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 103ms (Views: 93.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:46:14 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.2ms)
+  Rendered submissions/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 105ms (Views: 98.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:46:16 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 110ms (Views: 98.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/submissions/5" for 127.0.0.1 at 2018-03-15 23:46:22 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [2 times] (8.3ms)
+  Rendered submissions/show.html.erb within layouts/application (20.5ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <%= div_for(comment) do %>
+    2:   <div class="comments-wrapper clearfix">
+    3:     <div class="null-left">
+    4:       <p><small> <%= comment.user.email %> <strong><%= time_ago_in_words(comment.created_at) %></strong> ago </small></p>
+    5:       <p class="lead"><%= comment.body %></p>
+    6:     </div>
+    7:   </div>
+  
+app/views/comments/_comment.html.erb:4:in `block in _app_views_comments__comment_html_erb___3115569048305350326_70290893428500'
+app/views/comments/_comment.html.erb:1:in `_app_views_comments__comment_html_erb___3115569048305350326_70290893428500'
+app/views/submissions/show.html.erb:29:in `_app_views_submissions_show_html_erb__2871481755924505878_70290893632120'
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Rorpis/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.2ms)
+Started GET "/" for 127.0.0.1 at 2018-03-15 23:46:24 -0300
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions" ORDER BY "submissions"."created_at" DESC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 2]]
+  Rendered submissions/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 121ms (Views: 111.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/submissions/4" for 127.0.0.1 at 2018-03-15 23:46:27 -0300
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Submission"], ["vote_flag", "t"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."submission_id" = $1[0m  [["submission_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.1ms)
+  Rendered submissions/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 95ms (Views: 86.1ms | ActiveRecord: 2.0ms)
+
+

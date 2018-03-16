@@ -1,7 +1,7 @@
 <div class="page-header">
   <h4>
     <%= link_to like_submission_path(@submission), method: :put do %>
-      <i class="fa fa-caret-up fa-lg " aria-hidden="true"></i>
+      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
     <% end %>
     <%= @submission.title %>
     <br>
@@ -13,10 +13,16 @@
   <p><%= @submission.get_upvotes.size %> likes, by <%= @submission.user.email %> <%= time_ago_in_words(@submission.created_at) %> ago | <%= link_to "#{@submission.comments.count} comments", @submission %> </p>
   <br>
 
-  <%= simple_form_for [@submission, Comment.new] do |f| %>
-    <%= f.text_area :body, class: "form-control" %>
-    <br>
-    <%= f.submit "add comment" %>
+  <% if user_signed_in? %>
+    <%= simple_form_for [@submission, Comment.new] do |f| %>
+      <%= f.text_area :body, class: "form-control" %>
+      <br>
+      <%= f.submit "agregar comentario" %>
+    <% end %>
+  <% else %>
+    <h6>
+      <i>Debes estar logeado para poder comentar</i>
+  </h4>
   <% end %>
 
   <div id="comments">

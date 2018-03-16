@@ -4,10 +4,11 @@
       <tr class="post">
         <td>
           <%= link_to like_submission_path(submission), method: :put do %>
-            <i class="fa fa-caret-up fa-lg " aria-hidden="true"></i>
+            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
           <% end %>
 
           <%= link_to submission.title, submission, class: "title" %>
+          <br>
           <%= submission.lead %>
           <br>
           <%= submission.body %>
