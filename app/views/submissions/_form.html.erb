@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= f.label "bajada" %>
-    <%= f.text_field :lead %>
+    <%= f.text_field :lead, :maxlength => 200, :size => 60 %>
   </div>
 
   <div class="field">
     <%= f.label "cuerpo" %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, size: "60x10" %>
   </div>
 
   <div class="actions">
