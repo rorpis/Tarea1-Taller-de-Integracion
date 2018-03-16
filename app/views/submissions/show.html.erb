@@ -4,10 +4,13 @@
       <i class="fa fa-caret-up fa-lg " aria-hidden="true"></i>
     <% end %>
     <%= @submission.title %>
-    <a href="<%= @submission.lead %>"><%= @submission.lead %></a>
-    <a href="<%= @submission.body %>"><%= @submission.body %></a>
+    <br>
+    <%= @submission.lead %>
+    <br>
+    <br>
+    <%= @submission.body %>
   </h4>
-  <p><%= @submission.get_upvotes.size %> points by <%= @submission.user.email %> <%= time_ago_in_words(@submission.created_at) %> ago | <%= link_to "#{@submission.comments.count} comments", @submission %> </p>
+  <p><%= @submission.get_upvotes.size %> likes, by <%= @submission.user.email %> <%= time_ago_in_words(@submission.created_at) %> ago | <%= link_to "#{@submission.comments.count} comments", @submission %> </p>
   <br>
 
   <%= simple_form_for [@submission, Comment.new] do |f| %>
