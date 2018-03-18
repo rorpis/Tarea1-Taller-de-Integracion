@@ -9,7 +9,7 @@ class SubmissionsController < ApplicationController
   # GET /submissions
   # GET /submissions.json
   def index
-    @submissions = Submission.order(created_at: :desc)
+    @submissions = Submission.order(created_at: :desc).limit(10)
   end
 
   # GET /submissions/1
